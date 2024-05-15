@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Manager</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Add styles here */
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #E9F1FA;
+    }
+
+    .container {
+      margin-top: 100px;
+      text-align: center;
+    }
+
+    input {
+      padding: 10px;
+      margin: 10px;
+      border-radius: 5px;
+      border: 1px solid lightgray;
+    }
+
+    .form {
+      width: 470px;
+      padding: 50px;
+      margin: auto;
+      margin-top: 50px;
+      text-align: center;
+      background-color: white;
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+    }
+
+    .form button {
+      padding: 18px 20px;
+      width: 350px;
+      font-size: 20px;
+      background-color: #6495ED;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      margin: 15px;
+      margin: 10px auto;
+      cursor: pointer;
+    }
+
+    .form input[type="text"],
+    .form input[type="password"],
+    .form input[type="date"],
+    .form input[type="time"] {
+      display: block;
+      padding: 10px;
+      width: 350px;
+      color: black;
+      font-size: 18px;
+      border: 1px solid lightgray;
+      border-radius: 10px;
+      margin: 10px auto;
+    }
+
+    .registerButton {
+      color: #6495ED;
+      cursor: pointer;
+    }
+
+    #task-list {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      margin-top: 20px;
+      text-align: left;
+    }
+
+    #task-list h3 {
+      margin-top: 0;
+    }
+
+    #task-list div {
+      margin-bottom: 10px;
+      padding: 10px;
+      border-bottom: 1px solid lightgray;
+    }
+
+    #task-list p {
+      margin: 0;
+    }
+
+    #task-list button {
+      background-color: #FF6347;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Task Manager</h1>
+    <div id="login-form" class="form">
+      <input type="text" id="login-username" placeholder="Username">
+      <input type="password" id="login-password" placeholder="Password">
+      <button onclick="login()">Login</button>
+      <button class="registerButton" onclick="showSignup()">Register</button>
+    </div>
+    <div id="signup-form" class="form" style="display: none;">
+      <input type="text" id="signup-username" placeholder="Username">
+      <input type="password" id="signup-password" placeholder="Password">
+      <button onclick="signup()">Sign Up</button>
+    </div>
+    <div id="task-form" class="form" style="display: none;">
+      <input type="text" id="task-name" placeholder="Task Name">
+      <input type="date" id="task-date">
+      <input type="time" id="task-time">
+      <button onclick="addTask()">Add Task</button>
+      <button onclick="viewTasks()">View Tasks</button>
+      <button onclick="logout()">Logout</button>
+    </div>
+    <div id="task-list" style="display: none;">
+      <!-- Task list will be displayed here -->
+    </div>
+    <div id="weekly-schedule">
+      <!-- Weekly schedule will be displayed here -->
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
